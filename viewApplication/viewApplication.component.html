@@ -1,0 +1,17 @@
+
+<mat-accordion multi="true" *ngIf="applications.length > 0 ">
+  <mat-expansion-panel *ngFor ="let application of applications">
+    <mat-expansion-panel-header>
+      Residence: {{application.applicationDate}}
+    </mat-expansion-panel-header>
+    <p>Requested Date           : {{application.requiredDate}}</p>
+    <p>Obtained Application Date: {{application.applicationDate}} </p>
+
+    <mat-action-row *ngIf="user.match('HouseOwner')">
+      <button ngModel #hoUser = "ngModel" mat-button collor = "primary">EDIT</button>
+      <button ngModel #hoUser = "ngModel" mat-button collor = "warm">DELETE</button>
+    </mat-action-row>
+
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="applications.length <= 0">No available application</p>
