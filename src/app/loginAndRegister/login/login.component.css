@@ -1,0 +1,85 @@
+:root {
+  --active-color: rgba(0,0,0,0.65);
+}
+
+.card-signup {
+  border: 1px solid #dadce0;
+  border-radius: .5rem;
+}
+
+.card-signup .card-body {
+  padding: 48px 40px 36px;
+}
+
+.login {
+  border-width: 1px !important;
+  box-shadow: none;
+  padding-top: .525rem;
+  padding-right: 1.4375rem;
+  padding-bottom: .525rem;
+  padding-left: 1.4375rem;
+  font-weight: 500;
+  font-size: .785rem;
+  border-radius: .25rem;
+}
+
+.login {
+ border-color: #dadce0 !important;
+}
+
+.login:hover {
+  background-color: #f6f9fe !important;
+  border-color: #d2e3fc !important;
+  box-shadow: none !important;
+}
+
+.login:focus,
+.login:active {
+  background-color: #e4eefd !important;
+  border-color: #d2e3fc !important;
+  box-shadow: none !important;
+}
+
+.md-form.mat-2 input[type=text],
+.md-form.mat-2 input[type=password]{
+  border-width: 1px !important;
+  border-style: solid;
+  border-color: #ced4da;
+  border-radius: 5px;
+  padding-top: .5rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: .3rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.md-form.mat-2 input[type=text]:focus,
+.md-form.mat-2 input[type=password]:focus{
+  border-color: #4285f4;
+  box-shadow: inset 0px 0px 0px 1px #4285f4;
+}
+
+.btn-toggle-pass {
+  border: none;
+  position: absolute;
+  top: 6px;
+  background: transparent;
+  right: 0;
+}
+
+.btn-toggle-pass.active {
+  color: var(--active-color);
+}
+
+body{
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+.card-foter{
+  color:black;
+}

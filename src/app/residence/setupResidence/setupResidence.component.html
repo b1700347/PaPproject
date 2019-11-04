@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Set up residence</h1>
+  <form (submit)="onAddResidence(newResidence)" #newResidence="ngForm">
+    <div>
+      <label for="typeofresidence">Type of Residence</label>
+      <select class="form-control" id="type" required>
+        <option *ngFor="let type of types" [value]="type">{{type}}</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Residence Name</label>
+      <input matInput type="text" class="form-control" name="name"
+      required ngModel #name="ngModel" minlength ="1">
+      <mat-error *ngIf="name.invalid"> Residence name is Required!</mat-error>
+    </div>
+
+    <div>
+      <label>Available Unit</label>
+      <input matInput type="number" class="form-control"
+      required ngModel #noUnit="ngModel"name="noUnit" min="1">
+      <mat-error *ngIf="noUnit.value < 0"> Enter Total Available Unit </mat-error>
+    </div>
+
+    <div>
+      <label>Unit size <mat-hint>Size in m<sup>2</sup></mat-hint> </label>
+      <input matInput type="number" class="form-control"
+      required ngModel #sizePerUnit="ngModel"name="sizePerUnit" min="1">
+      <mat-error *ngIf="sizePerUnit.value < 0 "> Enter Valid Unit Size </mat-error>
+    </div>
+
+    <div>
+      <label>Address</label>
+      <input matInput type="text" class="form-control" name="address"
+      required ngModel #address="ngModel" minlength ="1">
+      <mat-error *ngIf="address.invalid"> Address of the Residence is Required!</mat-error>
+    </div>
+
+    <div>
+      <label>Rental (RM)</label>
+      <input matInput type="number" class="form-control" name="monthlyRental"
+      required ngModel #monthlyRental="ngModel" min = "1" >
+      <mat-error *ngIf="monthlyRental.value < 0 "> Enter Rental Cost!</mat-error>
+    </div>
+
+    <div>
+      <mat-form-field class="example-full-width">
+        <textarea rows="5" type = "text" name = "facilities"
+        ngModel #facilities="ngModel"matInput placeholder="Please enter description"></textarea>
+      </mat-form-field>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
