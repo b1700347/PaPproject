@@ -1,0 +1,20 @@
+<body class="body">
+  <div class="card-group" multi="true" *ngIf="residences.length > 0 ">
+  <div class="card" *ngFor ="let residence of residences">
+    <img class="card-img-top img-responsive" src="assets/images/house/kualalumpur.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">{{residence.residenceName}}</h4>
+      <br>
+      <h5>{{residence.monthlyRental}}</h5>
+      <p class="card-text">
+        Residence Address: {{residence.address}} <br>
+        Unit Size        : {{residence.sizePerUnit}} <br>
+        Available Unit   : {{residence.numUnits}} <br>
+        Facilities       : {{residence.facilities}} <br>
+      </p>
+      <a href="/submitApplication" class="btn btn-primary">Apply now</a>
+    </div>
+  </div>
+  </div>
+  <p class="info-text mat-body-1" *ngIf="residences.length <= 0">No Available Residence</p>
+</body>

@@ -1,0 +1,20 @@
+<body class="body">
+<mat-card>
+<h2>Submit Application</h2>
+  <form (submit)="onAddApplication(applicationForm)" #applicationForm="ngForm">
+  <mat-form-field>
+    <div class="md-form">
+      <input name="enteredDate" type="date" id="date" class="form-control" mdbInput ngModel
+      #enteredDate= "ngModel">
+      <label for="input">Date requested to stay</label>
+    </div>
+    <mat-error *ngIf="enteredDate.invalid">Please enter valid Date</mat-error>
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color = "accent"
+    type="submit">Submit Application</button>
+  </form>
+</mat-card>
+</body>

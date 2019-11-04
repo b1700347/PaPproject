@@ -1,0 +1,20 @@
+.body{
+  background-color: white;
+}
+
+.card-text{
+  color: black;
+
+}
+.card-title{
+  color: black;
+
+}
+.row {
+  margin: auto;
+}
+
+.card{
+  border: 1px solid black;
+  border-radius: .2rem;
+}

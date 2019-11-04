@@ -1,0 +1,26 @@
+<body class="body">
+<h1>Application List</h1>
+<mat-accordion multi="true" *ngIf="applications.length > 0 " class="body">
+  <mat-expansion-panel *ngFor ="let application of applications">
+    <mat-expansion-panel-header *ngIf="user.match('HouseOwner')">
+      Applicant Name: User's Name
+    </mat-expansion-panel-header>
+    <mat-expansion-panel-header *ngIf="user.match('Applicant')">
+      Residence Name: Residence's Name
+    </mat-expansion-panel-header>
+    <p>Status : {{application.status}}</p>
+    <p *ngIf ="user.match('HouseOwner')">Obtained Application Date: {{application.requiredDate}}</p>
+    <p>Requested Date: {{application.applicationDate}} </p>
+<!--
+    <mat-action-row *ngIf="user.match('HouseOwner')">
+      <button ngModel #hoUser = "ngModel" mat-button collor = "warm"
+      (submit)="onDeleteApplication()"  >DELETE</button>
+    </mat-action-row>
+-->
+  </mat-expansion-panel>
+</mat-accordion>
+<app-view-app-table></app-view-app-table>
+
+
+
+</body>
